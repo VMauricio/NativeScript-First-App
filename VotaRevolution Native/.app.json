@@ -1,15 +1,77 @@
 {
   "type": "NativeScript",
-  "isNew": true,
+  "name": "nativeScriptApp",
+  "navigation": "none",
+  "views": [
+    {
+      "type": "view",
+      "name": "home",
+      "title": "Home",
+      "addToNavigation": true,
+      "icon": "home",
+      "components": []
+    },
+    {
+      "type": "view",
+      "name": "signInView",
+      "title": "Log In",
+      "addToNavigation": true,
+      "icon": "contacts",
+      "components": [
+        {
+          "type": "signin",
+          "name": "signInViewModel",
+          "dataProvider": "defaultProvider",
+          "usernameLabel": "Usuario",
+          "passwordLabel": "Password",
+          "confirmLabel": "Log In",
+          "signinRedirect": "home",
+          "navigateToSignup": true,
+          "usernamePlaceholder": "",
+          "passwordPlaceholder": "",
+          "registerLabel": "Registrate",
+          "signup": "registerView"
+        }
+      ]
+    },
+    {
+      "type": "view",
+      "name": "registerView",
+      "title": "Registrate",
+      "addToNavigation": true,
+      "icon": "contacts",
+      "components": [
+        {
+          "type": "signup",
+          "name": "registerViewModel",
+          "dataProvider": "defaultProvider",
+          "emailLabel": "Email",
+          "usernameLabel": "Usuario",
+          "passwordLabel": "Password",
+          "registerLabel": "Register",
+          "registerRedirect": "home",
+          "navigateToSignin": true,
+          "emailPlaceholder": "",
+          "usernamePlaceholder": "",
+          "passwordPlaceholder": "",
+          "signinLabel": "Log In",
+          "signin": "signInView"
+        }
+      ]
+    }
+  ],
+  "view": "signInView",
+  "skin": "native",
+  "transition": "none",
   "dataProviders": [
     {
       "type": "dataProvider",
-      "title": "DefaultProvider",
       "name": "defaultProvider",
+      "title": "DefaultProvider",
       "source": "everlive",
-      "offlineStorage": true,
       "everliveKey": "0B5xy3g9QzFlfMfl",
-      "everliveUrl": ""
+      "offlineStorage": true,
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/"
     }
   ]
 }
