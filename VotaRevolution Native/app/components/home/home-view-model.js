@@ -4,7 +4,10 @@ var ViewModel,
 
 ViewModel = new Observable({
 
-    pageTitle: 'Home',
+    pageTitle: 'Votos',
+
+    listItems: [],
+
     // additional properties
 });
 

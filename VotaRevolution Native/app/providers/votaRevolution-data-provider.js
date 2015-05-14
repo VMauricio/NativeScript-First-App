@@ -7,7 +7,7 @@ provider = new TelerikBackendServices({
 
     url: '//platform.telerik.com/bs-api/v1/',
 
-    apiKey: '0B5xy3g9QzFlfMfl',
+    apiKey: 'oahhIT5rw1KaN7Ta',
     scheme: 'https'
 });
 

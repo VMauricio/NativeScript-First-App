@@ -2,7 +2,7 @@
 var _,
 
     _consts,
-    dataService = require('../../providers/defaultProvider-data-provider'),
+    dataService = require('../../providers/votaRevolution-data-provider'),
     localSettings = require('application-settings'),
 
     // additional requires

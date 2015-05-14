@@ -6,10 +6,23 @@
     {
       "type": "view",
       "name": "home",
-      "title": "Home",
+      "title": "Votos",
       "addToNavigation": true,
       "icon": "home",
-      "components": []
+      "components": [
+        {
+          "type": "list",
+          "name": "homeModel",
+          "dataProvider": "votaRevolution",
+          "masterDetails": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "collection": "Usuarios",
+          "iconField": true,
+          "headerField": "Nombre",
+          "subHeaderField": "Votos"
+        }
+      ]
     },
     {
       "type": "view",
@@ -21,7 +34,7 @@
         {
           "type": "signin",
           "name": "signInViewModel",
-          "dataProvider": "defaultProvider",
+          "dataProvider": "votaRevolution",
           "usernameLabel": "Usuario",
           "passwordLabel": "Password",
           "confirmLabel": "Log In",
@@ -44,11 +57,11 @@
         {
           "type": "signup",
           "name": "registerViewModel",
-          "dataProvider": "defaultProvider",
+          "dataProvider": "votaRevolution",
           "emailLabel": "Email",
           "usernameLabel": "Usuario",
           "passwordLabel": "Password",
-          "registerLabel": "Register",
+          "registerLabel": "Registrar",
           "registerRedirect": "home",
           "navigateToSignin": true,
           "emailPlaceholder": "",
@@ -66,12 +79,12 @@
   "dataProviders": [
     {
       "type": "dataProvider",
-      "name": "defaultProvider",
-      "title": "DefaultProvider",
+      "name": "votaRevolution",
+      "title": "VotaRevolution / Vota Revolution",
       "source": "everlive",
-      "everliveKey": "0B5xy3g9QzFlfMfl",
-      "offlineStorage": true,
-      "everliveUrl": "//platform.telerik.com/bs-api/v1/"
+      "everliveKey": "oahhIT5rw1KaN7Ta",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "offlineStorage": true
     }
   ]
 }

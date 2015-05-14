@@ -3,6 +3,35 @@
     <GridLayout rows="auto, *">
         <header:action-bar />
         <StackLayout row="1">
+
+            <GridLayout rows="*">
+
+                <ListView items="{{ listItems }}">
+
+                    <ListView.itemTemplate>
+                        <GridLayout columns="48, *" cssClass="padded-label">
+                            <StackLayout height="50" />
+
+                            <Image col="0" width="32" height="32" margin="8 6" src="{{ icon }}" />
+
+                            <StackLayout col="1" cssClass="padded-label-stack">
+                                <Label cssClass="title-label">
+                                    <Label.formattedText>
+                                        <FormattedString>
+                                            <FormattedString.spans>
+                                                <Span text="{{ header }}" fontAttributes="Bold" textWrap="true" />
+                                            </FormattedString.spans>
+                                        </FormattedString>
+                                    </Label.formattedText>
+                                </Label>
+                                <Label text="{{ description }}" textWrap="true" />
+                            </StackLayout>
+
+                        </GridLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+            </GridLayout>
+
             <!-- additional view content -->
         </StackLayout>
     </GridLayout>

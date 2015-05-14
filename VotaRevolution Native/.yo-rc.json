@@ -4,7 +4,7 @@
   ],
   "generator-NativeScript": {
     "cleanup": [
-      "./app/providers/defaultProvider-data-provider.js",
+      "./app/providers/votaRevolution-data-provider.js",
       "./app/components/home/",
       "./app/components/signInView/",
       "./app/components/registerView/"
